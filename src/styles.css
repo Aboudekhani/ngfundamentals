@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.hoverwell:hover {
+    background-color: #485563;
+    cursor: pointer;
+  }
+  
+  .container {
+    padding-top: 40px;
+  }
+  
+  .pointable {
+    cursor: pointer;
+  }
+  
+  button {
+    color: #555;
+  }
+  
+  [hidden] {
+    display: none !important;
+  }
+  
+  .toast-success {
+    background-color: #51a351;
+  }
+  .toast-error {
+    background-color: #bd362f;
+  }
+  .toast-info {
+    background-color: #2f96b4;
+  }
+  .toast-warning {
+    background-color: #f89406;
+  }
+body{
+    background-color: rgb(17, 2, 85);
+    color: ivory;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+ .navbar{
+     background-color: rgb(54, 31, 138);
+ }
+ .container{
+     padding: 1px;
+ }
+.card {
+    /* Add shadows to create the "card" effect */
+    background-color: rgb(54, 31, 138);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  
+  
+  /* Add some padding inside the card container */
+    
