@@ -6,7 +6,7 @@ import { from } from 'rxjs';
 export const appRouts: Routes = [
     {path : 'events' ,component:EventsListComponent},
     {path : 'event/:id' ,component: EventDetailsComponent},
-    {path: '' ,redirectTo:'./events',pathMatch:'full'},
+    {path: '' ,redirectTo:'/events',pathMatch:'full'},
     
 
 ]
