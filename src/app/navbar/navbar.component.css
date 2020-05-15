@@ -1,0 +1,8 @@
+.nav.navbar-nav{
+    font-size: 15px;
+    
+}
+@media(max-width : 1200px) {
+    #searchform {display: none;}
+}
+li>a.active {color: #f97924;}
