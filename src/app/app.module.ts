@@ -8,6 +8,8 @@ import { ToasterService } from './common/toastr-service';
 import { RouterModule,Router } from '@angular/router';
 import { EventRouteActivator } from './events/event-details/index';
 import { appRouts } from './routes';
+import { AuthService } from './user/auth.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -15,12 +17,14 @@ import { appRouts } from './routes';
   declarations: [
     EventsAppComponent,
     EventsListComponent,
-    EventThumbnailComponent,
+    EventThumbnailComponent, 
     NavbarComponent,
     CreateEventComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRouts)
   ],
   providers: [
@@ -28,7 +32,7 @@ import { appRouts } from './routes';
           ToasterService, 
           EventRouteActivator,
           EventListResolver,
-          
+          AuthService
         ],
   bootstrap: [EventsAppComponent]
 })
