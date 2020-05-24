@@ -6,10 +6,11 @@ import {EventService} from './events/shared/index';
 import { EventsAppComponent } from './event-app.component';
 import { ToasterService } from './common/toastr-service';
 import { RouterModule,Router } from '@angular/router';
-import { EventRouteActivator } from './events/event-details/index';
+import { EventRouteActivator} from './events/event-details/index';
 import { appRouts } from './routes';
 import { AuthService } from './user/auth.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EventDetailsModule } from './events/event-details/event-details/event-details.module';
 
 
 
@@ -19,13 +20,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     EventsListComponent,
     EventThumbnailComponent, 
     NavbarComponent,
-    CreateEventComponent
+    CreateEventComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRouts),
+    EventDetailsModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(appRouts)
+    
   ],
   providers: [
           EventService,
