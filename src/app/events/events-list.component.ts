@@ -3,7 +3,7 @@ import { templateJitUrl } from '@angular/compiler';
 import { Template } from '@angular/compiler/src/render3/r3_ast';
 import { EventService } from './shared/event-service';
 import { NgbToastHeader } from '@ng-bootstrap/ng-bootstrap';
-import { ToasterService } from '../common/toastr-service';
+
 import { ActivatedRoute } from '@angular/router';
 
 declare let toastr
@@ -15,7 +15,7 @@ declare let toastr
 })
 export class EventsListComponent implements OnInit {
      events : any
-    constructor(private eventService : EventService,private toastr :ToasterService,
+    constructor(private eventService : EventService,
         private route: ActivatedRoute) {
       
         
@@ -23,8 +23,6 @@ export class EventsListComponent implements OnInit {
     ngOnInit() {
          this.events = this.route.snapshot.data['events']
     }
-    handlethumbnailclick(eventName){
-       this.toastr.success(eventName) 
-    }
+   
   
 }

@@ -19,9 +19,9 @@
             </li>
         </ul>
       
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn  my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchSession(searchTerm)" >
+            <input [(ngModel)] ="searchTerm" name="searchTerm" class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button  class="btn  my-2 my-sm-0"  modal-trigger type="submit">Search</button>
         </form>
         <span class="navbar-text">
             <a *ngIf="!authService.isAuthenticated() " [routerLink]="['user/login'] ">Login</a>
@@ -31,6 +31,10 @@
     </div>
 </nav>
 
-
+<app-simple-modal title="match session" >
+    <div class="list-group">
+        <a class="list-group-item" *ngFor="let session of foundSession" [routerLink]="['/event',session.eventId]">{{session.name}} </a>
+    </div>
+</app-simple-modal>
 
   
