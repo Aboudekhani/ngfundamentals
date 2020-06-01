@@ -8,6 +8,7 @@ import { EventService } from '../../shared';
 import { CollapsibleWellComponent } from 'src/app/common/collapsible-well.component';
 import { DurationPipe } from '../../shared/duration.pipe';
 
+
 @NgModule({
     imports:[
         CommonModule,
@@ -21,7 +22,8 @@ import { DurationPipe } from '../../shared/duration.pipe';
         EventDetailsComponent,
         CreateSessionComponent,
         CollapsibleWellComponent,
-        DurationPipe
+        DurationPipe,
+       
     ],
     exports:[
         EventDetailsComponent,
